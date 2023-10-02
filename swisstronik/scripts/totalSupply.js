@@ -39,7 +39,7 @@ async function main() {
     const contract = replace_contractFactory.attach(replace_contractAddress);
 
     const replace_functionName = "totalSupply";
-    const replace_functionArgs = "0x16af037878a6cAce2Ea29d39A3757aC2F6F7aac1"; 
+    const replace_functionArgs = "0x2EE917B5A7F633B5dd649a0b9B060e22f485F7b2"; 
     const responseMessage = await sendShieldedQuery(signer.provider, replace_contractAddress, contract.interface.encodeFunctionData(replace_functionName, replace_functionArgs));
 
     // Decode the Uint8Array response into a readable string
