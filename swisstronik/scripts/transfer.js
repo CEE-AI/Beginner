@@ -32,7 +32,7 @@ async function main() {
 
     // Send a shielded transaction to execute a transaction in the contract
     const replace_functionName = "transfer";
-    const replace_functionArgs = ["0x16af037878a6cAce2Ea29d39A3757aC2F6F7aac1", "2"];
+    const replace_functionArgs = ["0x16af037878a6cAce2Ea29d39A3757aC2F6F7aac1", "30"];
     const transaction = await sendShieldedTransaction(signer, replace_contractAddress, contract.interface.encodeFunctionData(replace_functionName, replace_functionArgs), 0);
 
     await transaction.wait();

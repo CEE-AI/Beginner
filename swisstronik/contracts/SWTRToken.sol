@@ -11,16 +11,16 @@ contract MySWTR is ERC20 {
     } 
 
     modifier onlyOwner() {
-    require(msg.sender == owner, "Not the owner");
-    _;
+        require(msg.sender == owner, "Not the owner");
+        _;
     }
 
     function mint100tokens() public onlyOwner {
-        _mint(msg.sender,100*10**18); //Minting 100 SWTR tokens
+        _mint(owner, 100*10**18); //Minting 100 SWTR tokens
     }
 
     function burn100tokens() public onlyOwner{
-        _burn(msg.sender,100*10**18); //burning 100 SWTR tokens
+        _burn(owner, 100*10**18); //burning 100 SWTR tokens
     }
     
 }

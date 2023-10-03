@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "C:\\Users\\Enigma\\Desktop\\learnWeb3-io\\Earn\\Beginner\\swisstronik\\contracts\\SWTRToken.sol": {
-      "lastModificationDate": 1696175116784,
-      "contentHash": "09447f319af703fe809da8d8afa18f94",
+      "lastModificationDate": 1696338950891,
+      "contentHash": "270cfaeaa45467fa6c76526cfb8e889f",
       "sourceName": "contracts/SWTRToken.sol",
       "solcConfig": {
         "version": "0.8.19",
