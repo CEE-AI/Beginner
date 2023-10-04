@@ -1,7 +1,6 @@
 require("@nomicfoundation/hardhat-toolbox");
 require('dotenv').config();
-const PRIVATE_KEY = "61d94057e0d98e5edca23ae6d03c1e66cc98a12d4209213c97e443bb7d6d918c"
-
+const PRIVATE_KEY = ""
 module.exports = {
   solidity: "0.8.19",
   networks: {

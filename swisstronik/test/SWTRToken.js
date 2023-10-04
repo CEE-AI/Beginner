@@ -34,16 +34,18 @@ describe("MySWTR contract", function() {
             expect(ownerBalance.toString()).to.equal("100000000000000000000");
     });
 
-    it("Should burn 100 SWTR tokens from the owner", async function () {
+    it("Should burn all remaining SWTR tokens from the owner", async function () {
         const initialOwnerBalance = await ceeaiToken.balanceOf(owner.address);
 
-        if (initialOwnerBalance >= ethers.parseEther("100000000000000000000")) {
-            await ceeaiToken.burn100tokens();
+        // Check if the owner has any balance to burn
+        if (initialOwnerBalance > ethers.parseEther("0")) {
+            await ceeaiToken.burn(initialOwnerBalance);
             const ownerBalance = await ceeaiToken.balanceOf(owner.address);
 
             expect(ownerBalance.toString()).to.equal("0");
         } else {
-            console.error("Owner does not have enough balance to burn 100 SWTR tokens.");
+            // Handle the case where the owner doesn't have any balance to burn
+            console.error("Owner has no SWTR tokens to burn.");
         }
     });
 
